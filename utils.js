@@ -144,3 +144,27 @@ function invertMatrix(m) {
         j: { x: (-1 * m.j.x) / det, y: m.i.x / det },
     };
 }
+
+// Parse number input that can be a decimal or a fraction
+function parseNumberInput(value) {
+    if (typeof value !== 'string') {
+        value = String(value);
+    }
+    
+    value = value.trim();
+    
+    // Check if it's a fraction (contains a single '/')
+    if (value.includes('/')) {
+        const parts = value.split('/');
+        if (parts.length === 2) {
+            const numerator = parseFloat(parts[0]);
+            const denominator = parseFloat(parts[1]);
+            if (!isNaN(numerator) && !isNaN(denominator) && denominator !== 0) {
+                return numerator / denominator;
+            }
+        }
+    }
+    
+    // Otherwise, parse as a regular float
+    return parseFloat(value);
+}
