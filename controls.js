@@ -114,8 +114,8 @@ addVector.addEventListener('click', () => {
     const cellY = vectorCard.querySelector('.cell.y');
 
     const readVectorValues = () => {
-        const asNumX = parseFloat(cellX.value);
-        const asNumY = parseFloat(cellY.value);
+        const asNumX = parseNumberInput(cellX.value);
+        const asNumY = parseNumberInput(cellY.value);
         if (!isNaN(asNumX) && !isNaN(asNumY)) {
             const index = vectors.findIndex((vec) => vec.id === id);
             vectors[index] = {
@@ -224,8 +224,8 @@ addPoint.addEventListener('click', () => {
     const cellY = pointCard.querySelector('.cell.y');
 
     const readPointValues = () => {
-        const asNumX = parseFloat(cellX.value);
-        const asNumY = parseFloat(cellY.value);
+        const asNumX = parseNumberInput(cellX.value);
+        const asNumY = parseNumberInput(cellY.value);
         if (!isNaN(asNumX) && !isNaN(asNumY)) {
             const index = points.findIndex((pnt) => pnt.id === id);
             points[index] = {
@@ -407,10 +407,10 @@ const addMatrixCard = () => {
     const jY = matrixCard.querySelector('.cell.j-y');
 
     const readMatrixValues = () => {
-        const asNumIX = parseFloat(iX.value);
-        const asNumIY = parseFloat(iY.value);
-        const asNumJX = parseFloat(jX.value);
-        const asNumJY = parseFloat(jY.value);
+        const asNumIX = parseNumberInput(iX.value);
+        const asNumIY = parseNumberInput(iY.value);
+        const asNumJX = parseNumberInput(jX.value);
+        const asNumJY = parseNumberInput(jY.value);
         if (
             !isNaN(asNumIX) &&
             !isNaN(asNumIY) &&
