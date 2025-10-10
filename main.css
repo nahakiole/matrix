@@ -84,6 +84,63 @@ input[type='checkbox']:checked::after {
     margin-bottom: 1rem;
 }
 
+#share {
+    background: #eaeaea;
+    border: 2px solid #666;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1rem;
+}
+
+#share h2 {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+#share p {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1rem;
+}
+
+.share-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: stretch;
+}
+
+#share-url {
+    flex: 1;
+    border: 1px solid #222;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    background: #f6f6f6;
+}
+
+#share-url:focus {
+    outline: 2px solid #666;
+}
+
+#share-copy {
+    flex-shrink: 0;
+}
+
+#share-status {
+    min-height: 1.2rem;
+    margin-top: 0.4rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+#share-status.success {
+    color: #1a7f37;
+}
+
+#share-status.error {
+    color: #a42834;
+}
+
 #logo {
     height: 2rem;
     display: inline;

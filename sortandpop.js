@@ -11,6 +11,7 @@ const sorter = Sortable.create(matrixList, {
             });
 
             // draw();
+            if (typeof scheduleShareUpdate === 'function') scheduleShareUpdate();
         },
     },
 });
